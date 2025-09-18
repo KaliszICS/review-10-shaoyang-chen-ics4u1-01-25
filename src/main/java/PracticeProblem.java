@@ -3,31 +3,34 @@ public class PracticeProblem {
 	public static void main(String args[]) {
 
 	}
-	public static void pyramid(int n){
+	public static String pyramid(int n){
+        StringBuilder sout = new StringBuilder();
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
-                System.out.print("*");
+                sout.append("*");
             }
-            System.out.println();
+            sout.append("\n");
         }
-
+        return sout.toString();
     }
-    public static void square(int n){
+    public static String square(int n){
+        StringBuilder sout = new StringBuilder();
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 if (i == 1 || i == n) {
-                    System.out.print("*");
+                    sout.append("*");
                 } else {
                     if (j < n && j > 1) {
-                        System.out.print(" ");
+                        sout.append(" ");
                     } else {
-                        System.out.print("*");
+                        sout.append("*");
                     }
                 }
 
             }
-            System.out.println();
+            sout.append("\n");
         }
+        return sout.toString();
     }
     public static boolean hasLowercase(String str){
         char[] chars = str.toCharArray();
